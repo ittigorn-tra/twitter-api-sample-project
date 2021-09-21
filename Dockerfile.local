@@ -1,0 +1,45 @@
+FROM ubuntu:18.04
+
+# update packages
+RUN apt-get update
+
+# set env
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=Asia/Bangkok
+ENV PORT 80
+
+# System packages 
+RUN apt-get install -y curl tzdata
+
+# change timezone of the container
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+RUN dpkg-reconfigure tzdata
+
+# Install miniconda to /miniconda
+RUN curl -LO http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+RUN bash Miniconda3-latest-Linux-x86_64.sh -p /miniconda3 -b
+RUN rm Miniconda3-latest-Linux-x86_64.sh
+ENV PATH=/miniconda3/bin:${PATH}
+RUN conda update -y conda
+
+# change working directory
+WORKDIR /app/anymind
+
+# copy over other files:
+COPY ./local.env ./.env
+COPY ./app ./app
+COPY ./setting_up ./setting_up
+COPY ./README.md .
+RUN mkdir temp
+
+# create the conda environment:
+RUN conda env create -f ./setting_up/env_requirements/linux/conda.yml
+
+# the following command will run when this docker image is mounted
+CMD exec /miniconda3/envs/anymind/bin/uvicorn --bind :$PORT app.main:app --chdir /app/anymind
+
+# to build the container, enter command below
+# docker build -t anymind-local -f Dockerfile.local .
+
+# to run the container locally, enter command below
+# docker run -d --name anymind-local -p 80:80 anymind-local

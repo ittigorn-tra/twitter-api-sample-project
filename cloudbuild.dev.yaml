@@ -1,0 +1,17 @@
+steps:
+  # build & push the container image
+- name: 'gcr.io/cloud-builders/docker'
+  entrypoint: 'bash'
+  args: ['-c', 'docker pull gcr.io/happily-dev/anymind:latest || exit 0']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/happily-dev/anymind:latest', '--cache-from', 'gcr.io/happily-dev/anymind:latest', '.', '--file', './Dockerfile.dev']
+  # Push the container image to Container Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/happily-dev/anymind:latest']
+  # Deploy container image to Cloud Run
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+  args: ['run', 'deploy', 'anymind-api', '--image', 'gcr.io/happily-dev/anymind:latest', '--memory', '256Mi', '--concurrency', '80', '--max-instances', '100', '--region', 'us-central1', '--allow-unauthenticated', '--platform', 'managed']
+images:
+- gcr.io/happily-dev/anymind:latest
+timeout: 3600s

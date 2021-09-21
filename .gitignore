@@ -1,0 +1,14 @@
+__pycache__/
+/*/__pycache__/
+.pytest_cache/
+/*/.pytest_cache/
+__machine_specific
+notebooks/.ipynb_checkpoints/
+notebooks/output/*
+.vscode/*
+logs/*
+temp/*
+output/*
+.env
+!.gitkeep
+!/*/.gitkeep
