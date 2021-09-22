@@ -18,8 +18,8 @@ from app.core.settings import Settings
 
 
 class TwitterServices(object):
-  _search_url   = "https://api.twitter.com/2/tweets/search/recent"
-  _settings     = Settings()
+  _settings           = Settings()
+  search_recent_url   = "https://api.twitter.com/2/tweets/search/recent"
 
   @classmethod
   def parse_datetime(cls, dt: str, localize: bool=True) -> datetime:
@@ -35,10 +35,11 @@ class TwitterServices(object):
 
   @classmethod
   def reformat_datetime(cls, dt: str) -> str:
-    parsed_dt = cls.parse_datetime(dt)
-    time_str = parsed_dt.strftime('%H:%M %p - ')
-    date_str = parsed_dt.strftime(' %b %Y')
-    result_str = f'{time_str}{parsed_dt.day}{date_str}'
+    parsed_dt   = cls.parse_datetime(dt)
+    time_str    = parsed_dt.strftime('%H:%M %p - ')
+    date_str    = parsed_dt.strftime(' %b %Y')
+    result_str  = f'{time_str}{parsed_dt.day}{date_str}'
+    if result_str[:1] == '0': result_str = result_str[1:]
     return result_str
 
   @classmethod
@@ -48,17 +49,16 @@ class TwitterServices(object):
     return req
 
   @classmethod
-  def _connect_to_endpoint(cls, url, query_params):
+  def _connect_to_endpoint(cls, url: str, query_params=None):
     response = requests.get(url, auth=cls._bearer_oauth, params=query_params)
     if response.status_code != 200:
       raise Exception(response.status_code, response.text)
     return response.json()
 
   @classmethod
-  def search_recent(cls, query_params):
-    json_response = cls._connect_to_endpoint(cls._search_url, query_params=query_params)
+  def execute_query(cls, url: str, query_params=None):
+    json_response = cls._connect_to_endpoint(url=url, query_params=query_params)
     return json_response
-
 
 
 # module testing

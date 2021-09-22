@@ -12,6 +12,7 @@ class Settings(BaseSettings):
   twitter_max_result_size:  int = 100
   twitter_max_query_length: int = 512
   twitter_datetime_format:  str = "%Y-%m-%dT%H:%M:%S.%fZ"
+  twitter_username_regex:   str = "^[A-Za-z0-9_]{1,15}$"
   default_timezone:         str = 'Asia/Bangkok'
   pickle_protocol:          int = 4
 
