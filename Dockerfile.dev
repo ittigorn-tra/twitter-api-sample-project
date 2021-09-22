@@ -36,7 +36,7 @@ RUN mkdir temp
 RUN conda env create -f ./setting_up/env_requirements/linux/conda.yml
 
 # the following command will run when this docker image is mounted
-CMD exec /miniconda3/envs/anymind/bin/uvicorn --bind :$PORT app.main:app --chdir /app/anymind
+CMD exec /miniconda3/envs/anymind/bin/uvicorn --port $PORT app.main:app --host 0.0.0.0
 
 # to build the container, enter command below
 # docker build -t anymind-dev -f Dockerfile.dev .
