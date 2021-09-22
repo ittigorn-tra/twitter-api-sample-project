@@ -1,7 +1,7 @@
 <!-----
 NEW: Check the "Suppress top comment" option to remove this info from the output.
 
-Conversion time: 0.771 seconds.
+Conversion time: 0.768 seconds.
 
 
 Using this Markdown file:
@@ -14,31 +14,28 @@ Using this Markdown file:
 Conversion notes:
 
 * Docs to Markdown version 1.0β31
-* Sun Sep 19 2021 23:11:16 GMT-0700 (PDT)
+* Tue Sep 21 2021 22:16:47 GMT-0700 (PDT)
 * Source doc: README.md
 ----->
 
 
 
-# Sample Project for Anymind
+# Sample Project for AnyMind Group
 
 
 ## Notes from the author
 
-First of all, thank you for the opportunity for me to express myself code-wise. Throughout the last few days I spent reading FastAPI docs and sifting through solutions online, I had a lot of fun and it really opened up a new world for me. Besides many new tools, aspects and practices I’m starting to adapt myself to, I found that FastAPI is more feature-rich and easier to use than Flask that I’ve been using before for all my prior projects.
+First of all, thank you for the opportunity for me to express myself code-wise. Throughout the last few days I spent reading Twitter API docs and sifting through solutions online, I had a lot of fun and it really opened up a new world for me. Besides many new tools, aspects and practices I’m starting to adapt myself to, I found that interacting with social media is fun.
 
 Although functional, This project is still far from well-structured or at least not met my own standard that I’d be proud of just yet. There are still many aspects that I’d like to keep improving even after I’ve submitted it. Some of which are:
 
 
 
 1. Implement a login system and a security scheme such as JWT.
-2. I need to learn more about routing and being more organized.
-3. Though there are some basic tests in the project, I want to learn more on writing tests that are more thorough.
-4. Using .env file and loading configs this way is new to me and I intend to keep improving it from here on up.
-5. Explore more on async features of this library.
-6. Enable this project to run on docker / Google Cloud Run.
+2. Though there are some basic tests in the project, I want to learn more on writing tests that are more thorough.
+3. Offer more options for each endpoint such as minimum retweeting count
 
-Lastly,** please comment **on my work. I’ve been working solo for quite a long time. Despite the fact that I want to work with other people with similar sets of interests, my current working environment doesn’t offer much. With this sample project, it’s a great chance for me to improve my skills towards working in tandem with other like-minded people.
+Lastly,** please comment **on my work. Thank you.
 
 
 ## Prerequisite
@@ -123,7 +120,7 @@ Lastly,** please comment **on my work. I’ve been working solo for quite a long
 
 API docs are auto-generated and can be viewed / test interactively via Swagger UI by visiting `localhost/docs`
 
-OpenAPI json file can also be downloaded on the page
+OpenAPI json file can also be downloaded on the page.
 
 
 ## Testing
@@ -137,7 +134,6 @@ OpenAPI json file can also be downloaded on the page
 
     Note: make sure you’ve previously created the conda environment for this project.
 
-2. Run `run_reinit_db_data.bat` to undo all changes in the development database
 
 
 ### Linux / Mac
@@ -146,38 +142,9 @@ OpenAPI json file can also be downloaded on the page
 
 1. Activate conda environment.
 2. Run `pytest` in the project root folder.
-3. Undo all changes in the development database
-    1. `cd scripts`
-    2. `python reinitialize_db_data.py`
-
-
-## Firestore Console
-
-Viewing / editing data can be done by visiting the Firestore Console via the link below.
-
-Please send me an email to [ittigorn.tra@gmail.com](mailto:ittigorn.tra@gmail.com) if you wish to have your privilege elevated for more available actions on the database.
-
-[https://console.firebase.google.com/u/0/project/anymind-dev](https://console.firebase.google.com/u/0/project/anymind-dev)
 
 
 ## Useful Tips for Development
-
-
-### Jupyter Notebook
-
-
-##### `notebooks/Delete all customers accounts and logs.ipynb`
-
-
-
-* Clear all customer / accounts / logs data from development database
-
-
-##### `notebooks/Load initial data.ipynb`
-
-
-
-* Insert initial sample data from `resources/initial_data.json` into development database
 
 
 ### Windows batch files
@@ -211,14 +178,12 @@ Please send me an email to [ittigorn.tra@gmail.com](mailto:ittigorn.tra@gmail.co
 * This batch file automatically activates the conda environment for you and launches a development server on your local machine.
 
 
-##### `run_reinit_db_data.bat`
-
-
-
-* This batch file automatically activates the conda environment for you, delete all customers, accounts on development database and re-insert initial data as defined in `resources/initial_data.json`.
-
-
 ## Miscellaneous
+
+
+### Twitter API v2 Sample Code
+
+[https://github.com/twitterdev/Twitter-API-v2-sample-code](https://github.com/twitterdev/Twitter-API-v2-sample-code)
 
 
 ### Markdown Converter

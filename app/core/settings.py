@@ -8,8 +8,12 @@ class Settings(BaseSettings):
   environment:              str
   twitter_bearer_token:     str
   root_dir:                 str = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+  twitter_min_result_size:  int = 10
   twitter_max_result_size:  int = 100
   twitter_max_query_length: int = 512
+  twitter_datetime_format:  str = "%Y-%m-%dT%H:%M:%S.%fZ"
+  default_timezone:         str = 'Asia/Bangkok'
+  pickle_protocol:          int = 4
 
   class Config:
     env_file          = '.env'
