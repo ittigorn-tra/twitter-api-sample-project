@@ -16,6 +16,9 @@ async def root():
 
 @app.get('/status')
 async def server_status():
+  '''
+  This endpoint responds with the status of the server. This could be useful when you want to check if the server environment and variables are as expected.
+  '''
   return {
     'root_dir': settings.root_dir,
     'environment': settings.environment,
@@ -31,8 +34,12 @@ async def get_tweets_by_a_hashtag(
     )
   ]=30) -> dict:
 
+  '''
+  This endpoint searches the most recent tweets then responds with tweets matching the query string in reverse chronological order.
+  '''
+
   results = Hashtags.search(hashtag=hashtag, limit=limit)
-  
+
   return results
 
 @app.get('/users/{user_id}')
@@ -44,6 +51,10 @@ async def get_user_tweets(
       le=settings.twitter_max_result_size,
     )
   ]=30) -> dict:
+  '''
+  This endpoint searches the most recent tweets from a specific user then responds with the data in reverse chronological order.
+  '''
+
   results = {
     'user_id' : user_id,
     'limit'   : limit,
