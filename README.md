@@ -1,7 +1,7 @@
 <!-----
 NEW: Check the "Suppress top comment" option to remove this info from the output.
 
-Conversion time: 0.768 seconds.
+Conversion time: 0.98 seconds.
 
 
 Using this Markdown file:
@@ -14,7 +14,7 @@ Using this Markdown file:
 Conversion notes:
 
 * Docs to Markdown version 1.0β31
-* Tue Sep 21 2021 22:16:47 GMT-0700 (PDT)
+* Wed Sep 22 2021 03:26:04 GMT-0700 (PDT)
 * Source doc: README.md
 ----->
 
@@ -55,13 +55,14 @@ Lastly,** please comment **on my work. Thank you.
 1. Clone project on to local machine
 2. Change directory to the project root
 3. Copy “local.env” file and rename it to “.env”
-4. Set up conda environment
+4. Open the file `.env` and replace the value of `TWITTER_BEARER_TOKEN` to the one you’ve received from me (the project author)
+5. Set up conda environment
     1. Open Miniconda/Anaconda prompt
     2. Change directory to the project root
     3. Execute command `conda env create -y -f “setting_up\env_requirements\windows\conda.yml”`
     4. Close the console
-5. Double-click “run_local_api.bat”
-6. API can be reached by calling “localhost”
+6. Double-click “run_local_api.bat”
+7. API can be reached by calling “localhost”
 
 
 ##### Notes
@@ -79,12 +80,13 @@ Lastly,** please comment **on my work. Thank you.
 1. Clone project on to local machine
 2. Change directory to the project root
 3. Copy “local.env” file and rename it to “.env”
-4. Set up conda environment
+4. Open the file `.env` and replace the value of `TWITTER_BEARER_TOKEN` to the one you’ve received from me (the project author)
+5. Set up conda environment
     1. Change directory to the project root
     2. Execute command `conda env create -y -f setting_up/env_requirements/linux/conda.yml`
-5. Activate the conda environment by executing the following command `source activate anymind`
-6. Execute the following command to run the API `uvicorn app.main:app --port 8000`
-7. API can be reached by calling “localhost:8000”
+6. Activate the conda environment by executing the following command `source activate anymind`
+7. Execute the following command to run the API `uvicorn app.main:app --port 8000`
+8. API can be reached by calling “localhost:8000”
 
 
 ##### Notes
@@ -98,15 +100,16 @@ Lastly,** please comment **on my work. Thank you.
 
 
 
-8. Clone project on to local machine
-9. Change directory to the project root
-10. Copy “local.env” file and rename it to “.env”
-11. Set up conda environment
-    3. Change directory to the project root
-    4. Execute command `conda env create -y -f setting_up/env_requirements/mac/conda.yml`
-12. Activate the conda environment by executing the following command `source activate anymind`
-13. Execute the following command to run the API `uvicorn app.main:app --port 8000`
-14. API can be reached by calling “localhost:8000”
+1. Clone project on to local machine
+2. Change directory to the project root
+3. Copy “local.env” file and rename it to “.env”
+4. Open the file `.env` and replace the value of `TWITTER_BEARER_TOKEN` to the one you’ve received from me (the project author)
+5. Set up conda environment
+    1. Change directory to the project root
+    2. Execute command `conda env create -y -f setting_up/env_requirements/mac/conda.yml`
+6. Activate the conda environment by executing the following command `source activate anymind`
+7. Execute the following command to run the API `uvicorn app.main:app --port 8000`
+8. API can be reached by calling “localhost:8000”
 
 
 ##### Notes
@@ -118,9 +121,11 @@ Lastly,** please comment **on my work. Thank you.
 
 ## API Documentation
 
-API docs are auto-generated and can be viewed / test interactively via Swagger UI by visiting `localhost/docs`
+API docs are auto-generated and can be viewed / test interactively via Swagger UI by visiting:
 
-OpenAPI json file can also be downloaded on the page.
+[http://localhost/docs](http://localhost/docs)
+
+OpenAPI json file can also be downloaded on the page mentioned above.
 
 
 ## Testing
@@ -145,6 +150,11 @@ OpenAPI json file can also be downloaded on the page.
 
 
 ## Useful Tips for Development
+
+
+### Postman
+
+Postman collection can be found in `postman/`
 
 
 ### Windows batch files
