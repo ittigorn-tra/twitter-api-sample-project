@@ -56,7 +56,7 @@ class Hashtags(TwitterServices):
       for _, row in result_df.iterrows():
         formatted_results.append({
           'account' : {
-            'fullname'  : row.name,
+            'fullname'  : row['name'],
             'href'      : f'/{row.username}',
             'id'        : row.author_id,
           },
