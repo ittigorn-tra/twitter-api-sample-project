@@ -1,7 +1,7 @@
 <!-----
 NEW: Check the "Suppress top comment" option to remove this info from the output.
 
-Conversion time: 0.871 seconds.
+Conversion time: 0.552 seconds.
 
 
 Using this Markdown file:
@@ -14,7 +14,7 @@ Using this Markdown file:
 Conversion notes:
 
 * Docs to Markdown version 1.0β31
-* Mon Sep 27 2021 07:47:04 GMT-0700 (PDT)
+* Mon Sep 27 2021 07:56:57 GMT-0700 (PDT)
 * Source doc: README.md
 ----->
 
@@ -26,6 +26,15 @@ Conversion notes:
 ## About this project
 
 This is a simple project that fetches tweets without using any third-party Twitter scraper and reshapes the data into the predefined schema.
+
+
+## Live API sample on Google Cloud Run
+
+Live API sample can be reached via the link below:
+
+[https://twitter-api-sample-xneb555pta-df.a.run.app](https://twitter-api-sample-xneb555pta-df.a.run.app)
+
+Note: There is a postman collection you can import for testing in `./postman`
 
 
 ## Prerequisite
