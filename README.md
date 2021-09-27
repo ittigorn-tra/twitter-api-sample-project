@@ -1,7 +1,7 @@
 <!-----
 NEW: Check the "Suppress top comment" option to remove this info from the output.
 
-Conversion time: 0.942 seconds.
+Conversion time: 0.861 seconds.
 
 
 Using this Markdown file:
@@ -14,28 +14,13 @@ Using this Markdown file:
 Conversion notes:
 
 * Docs to Markdown version 1.0β31
-* Mon Sep 27 2021 05:55:54 GMT-0700 (PDT)
+* Mon Sep 27 2021 06:31:11 GMT-0700 (PDT)
 * Source doc: README.md
 ----->
 
 
 
 # Twitter API Sample Project
-
-
-## Notes from the author
-
-First of all, thank you for the opportunity for me to express myself code-wise. Throughout the last few days I spent reading Twitter API docs and sifting through solutions online, I had a lot of fun and it really opened up a new world for me. Besides many new tools, aspects and practices I’m starting to adapt myself to, I found that interacting with social media is fun.
-
-Although functional, This project is still far from well-structured or at least not met my own standard that I’d be proud of just yet. There are still many aspects that I’d like to keep improving even after I’ve submitted it. Some of which are:
-
-
-
-1. Implement a login system and a security scheme such as JWT.
-2. Though there are some basic tests in the project, I want to learn more on writing tests that are more thorough.
-3. Offer more options for each endpoint such as minimum retweeting count
-
-Lastly,** please comment **on my work. Thank you.
 
 
 ## Prerequisite
