@@ -20,7 +20,7 @@ Conversion notes:
 
 
 
-# Sample Project for AnyMind Group
+# Sample Project for Twitter
 
 
 ## Notes from the author
@@ -84,7 +84,7 @@ Lastly,** please comment **on my work. Thank you.
 5. Set up conda environment
     1. Change directory to the project root
     2. Execute command `conda env create -y -f setting_up/env_requirements/linux/conda.yml`
-6. Activate the conda environment by executing the following command `source activate anymind`
+6. Activate the conda environment by executing the following command `source activate twitter-api-sample-project`
 7. Execute the following command to run the API `uvicorn app.main:app --port 8000`
 8. API can be reached by calling “localhost:8000”
 
@@ -107,7 +107,7 @@ Lastly,** please comment **on my work. Thank you.
 5. Set up conda environment
     1. Change directory to the project root
     2. Execute command `conda env create -y -f setting_up/env_requirements/mac/conda.yml`
-6. Activate the conda environment by executing the following command `source activate anymind`
+6. Activate the conda environment by executing the following command `source activate twitter-api-sample-project`
 7. Execute the following command to run the API `uvicorn app.main:app --port 8000`
 8. API can be reached by calling “localhost:8000”
 

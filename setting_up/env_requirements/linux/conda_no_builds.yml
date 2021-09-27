@@ -1,4 +1,4 @@
-name: anymind
+name: twitter-api-sample-project
 channels:
   - conda-forge
   - defaults
@@ -144,5 +144,5 @@ dependencies:
     - pyyaml==5.4.1
     - searchtweets==1.7.6
     - tweet-parser==1.13.2
-prefix: /home/dhas/anaconda3/envs/anymind
+prefix: /home/dhas/anaconda3/envs/twitter-api-sample-project
 

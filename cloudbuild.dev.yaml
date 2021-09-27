@@ -2,16 +2,16 @@ steps:
   # build & push the container image
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'bash'
-  args: ['-c', 'docker pull gcr.io/anymind-dev/sample-api:latest || exit 0']
+  args: ['-c', 'docker pull gcr.io/twitter-api-sample-project-dev/sample-api:latest || exit 0']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/anymind-dev/sample-api:latest', '--cache-from', 'gcr.io/anymind-dev/sample-api:latest', '.', '--file', './Dockerfile.dev']
+  args: ['build', '-t', 'gcr.io/twitter-api-sample-project-dev/sample-api:latest', '--cache-from', 'gcr.io/twitter-api-sample-project-dev/sample-api:latest', '.', '--file', './Dockerfile.dev']
   # Push the container image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/anymind-dev/sample-api:latest']
+  args: ['push', 'gcr.io/twitter-api-sample-project-dev/sample-api:latest']
   # Deploy container image to Cloud Run
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gcloud
-  args: ['run', 'deploy', 'anymind-sample-api', '--image', 'gcr.io/anymind-dev/sample-api:latest', '--memory', '256Mi', '--concurrency', '50', '--max-instances', '50', '--region', 'asia-east2', '--allow-unauthenticated', '--platform', 'managed']
+  args: ['run', 'deploy', 'twitter-api-sample-project-sample-api', '--image', 'gcr.io/twitter-api-sample-project-dev/sample-api:latest', '--memory', '256Mi', '--concurrency', '50', '--max-instances', '50', '--region', 'asia-east2', '--allow-unauthenticated', '--platform', 'managed']
 images:
-- gcr.io/anymind-dev/sample-api:latest
+- gcr.io/twitter-api-sample-project-dev/sample-api:latest
 timeout: 3600s

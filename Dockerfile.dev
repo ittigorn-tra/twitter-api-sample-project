@@ -23,7 +23,7 @@ ENV PATH=/miniconda3/bin:${PATH}
 RUN conda update -y conda
 
 # change working directory
-WORKDIR /app/anymind
+WORKDIR /app/twitter-api-sample-project
 
 # copy over other files:
 COPY ./development.env ./.env
@@ -36,10 +36,10 @@ RUN mkdir temp
 RUN conda env create -f ./setting_up/env_requirements/linux/conda.yml
 
 # the following command will run when this docker image is mounted
-CMD exec /miniconda3/envs/anymind/bin/uvicorn --port $PORT app.main:app --host 0.0.0.0
+CMD exec /miniconda3/envs/twitter-api-sample-project/bin/uvicorn --port $PORT app.main:app --host 0.0.0.0
 
 # to build the container, enter command below
-# docker build -t anymind-dev -f Dockerfile.dev .
+# docker build -t twitter-api-sample-project-dev -f Dockerfile.dev .
 
 # to run the container locally, enter command below
-# docker run -d --name anymind-dev -p 80:80 anymind-dev
+# docker run -d --name twitter-api-sample-project-dev -p 80:80 twitter-api-sample-project-dev

@@ -1,4 +1,4 @@
-name: anymind
+name: twitter-api-sample-project
 channels:
   - conda-forge
   - defaults
@@ -128,4 +128,4 @@ dependencies:
     - searchtweets==1.7.6
     - tweet-parser==1.13.2
     - urllib3==1.26.6
-prefix: C:\Users\Petch\.conda\envs\anymind
+prefix: C:\Users\Petch\.conda\envs\twitter-api-sample-project

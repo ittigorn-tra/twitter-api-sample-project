@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "6567e1a1-ff62-4521-ab97-36a72af34219",
-		"name": "Anymind",
+		"name": "Twitter API Sample Project",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [

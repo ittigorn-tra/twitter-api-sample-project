@@ -1,4 +1,4 @@
-name: anymind
+name: twitter-api-sample-project
 channels:
   - conda-forge
   - defaults
@@ -130,4 +130,4 @@ dependencies:
   - zeromq=4.3.4
   - zipp=3.5.0
   - zlib=1.2.11
-prefix: /Users/petch/opt/miniconda3/envs/anymind
+prefix: /Users/petch/opt/miniconda3/envs/twitter-api-sample-project
