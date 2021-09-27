@@ -10,5 +10,6 @@ logs/*
 temp/*
 output/*
 .env
+
 !.gitkeep
 !/*/.gitkeep

@@ -26,7 +26,7 @@ RUN conda update -y conda
 WORKDIR /app/twitter-api-sample-project
 
 # copy over other files:
-COPY ./development.env ./.env
+COPY ./temp.env ./.env
 COPY ./app ./app
 COPY ./setting_up ./setting_up
 COPY ./README.md .

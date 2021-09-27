@@ -1,7 +1,7 @@
 <!-----
 NEW: Check the "Suppress top comment" option to remove this info from the output.
 
-Conversion time: 0.861 seconds.
+Conversion time: 0.871 seconds.
 
 
 Using this Markdown file:
@@ -14,13 +14,18 @@ Using this Markdown file:
 Conversion notes:
 
 * Docs to Markdown version 1.0β31
-* Mon Sep 27 2021 06:31:11 GMT-0700 (PDT)
+* Mon Sep 27 2021 07:47:04 GMT-0700 (PDT)
 * Source doc: README.md
 ----->
 
 
 
 # Twitter API Sample Project
+
+
+## About this project
+
+This is a simple project that fetches tweets without using any third-party Twitter scraper and reshapes the data into the predefined schema.
 
 
 ## Prerequisite
