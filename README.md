@@ -25,7 +25,7 @@ Conversion notes:
 
 ## About this project
 
-This is a simple project that fetches tweets without using any third-party Twitter scraper and reshapes the data into the predefined schema. The requirements for this project can be found in `requirements/Project_Requirements.md`
+This is a simple project built for a code challenge. This API fetches tweets without using any third-party Twitter scraper and reshapes the data into the predefined schema. The code challenge detail / requirements for this project can be found in `requirements/Project_Requirements.md`
 
 
 ## Live API sample on Google Cloud Run
