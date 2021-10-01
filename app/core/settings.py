@@ -1,13 +1,12 @@
 import os
 from pydantic import BaseSettings
-
+from pathlib import Path
 
 class Settings(BaseSettings):
     app_name:                 str
     environment:              str
     twitter_bearer_token:     str
-    root_dir:                 str = os.path.dirname(
-        os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    BASE_DIR:                 str = os.path.join(*Path(__file__).resolve().parent.parent.parent.parts)
     twitter_min_result_size:  int = 10
     twitter_max_result_size:  int = 100
     twitter_max_query_length: int = 512

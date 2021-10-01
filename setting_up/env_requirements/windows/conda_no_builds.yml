@@ -9,6 +9,7 @@ dependencies:
   - async_generator=1.10
   - atomicwrites=1.4.0
   - attrs=21.2.0
+  - autopep8=1.5.7
   - backcall=0.2.0
   - blas=1.0
   - bleach=4.0.0
@@ -78,6 +79,7 @@ dependencies:
   - prompt-toolkit=3.0.17
   - prompt_toolkit=3.0.17
   - py=1.10.0
+  - pycodestyle=2.7.0
   - pycparser=2.20
   - pydantic=1.8.2
   - pygments=2.10.0

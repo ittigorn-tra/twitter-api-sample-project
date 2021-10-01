@@ -21,7 +21,7 @@ async def server_status():
     This endpoint responds with the status of the server. This could be useful when you want to check if the server environment and variables are as expected.
     '''
     return {
-        'root_dir': settings.root_dir,
+        'BASE_DIR': settings.BASE_DIR,
         'environment': settings.environment,
     }
 
