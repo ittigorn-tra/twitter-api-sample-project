@@ -1,14 +1,14 @@
 import os
-from pydantic import BaseSettings
 from pathlib import Path
+
+from pydantic import BaseSettings
 
 
 class Settings(BaseSettings):
     app_name:                 str
     environment:              str
     twitter_bearer_token:     str
-    BASE_DIR:                 str = os.path.join(
-        *Path(__file__).resolve().parent.parent.parent.parts)
+    base_dir:                 str = os.path.join(*Path(__file__).resolve().parent.parent.parent.parts)
     twitter_min_result_size:  int = 10
     twitter_max_result_size:  int = 100
     twitter_max_query_length: int = 512
@@ -24,8 +24,7 @@ class Settings(BaseSettings):
 
 if __name__ == '__main__':
     # run this file directly to check the functionality of the settings
-    settings = Settings(os.path.join(
-        *Path(__file__).resolve().parent.parent.parent.parts, '.env'))
+    settings = Settings(os.path.join(*Path(__file__).resolve().parent.parent.parent.parts, '.env'))
 
     for k, v in settings.__dict__.items():
         print(k, ' : ', v)

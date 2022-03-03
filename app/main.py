@@ -1,10 +1,11 @@
-from fastapi import FastAPI
 from typing import Optional
-from pydantic import constr, conint
 
-from app.core.settings import Settings
+from fastapi import FastAPI
+from pydantic import conint, constr
+
 from app.core.models.Hashtags import Hashtags
 from app.core.models.Users import Users
+from app.core.settings import Settings
 
 settings = Settings()
 app = FastAPI()
@@ -12,7 +13,7 @@ app = FastAPI()
 
 @app.get('/')
 async def root():
-    return {'message': 'API is working OK'}
+    return {'message': 'API is online'}
 
 
 @app.get('/status')
@@ -21,7 +22,7 @@ async def server_status():
     This endpoint responds with the status of the server. This could be useful when you want to check if the server environment and variables are as expected.
     '''
     return {
-        'BASE_DIR': settings.BASE_DIR,
+        'base_dir': settings.base_dir,
         'environment': settings.environment,
     }
 

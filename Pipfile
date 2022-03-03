@@ -1,0 +1,15 @@
+[requires]
+python_version = "3.7"
+
+[packages]
+fastapi = "*"
+pandas = "*"
+uvicorn = "*"
+requests = "*"
+jupyter = "*"
+jinja2 = "*"
+matplotlib = "*"
+python-dotenv = "*"
+
+[dev-packages]
+autopep8 = "*"

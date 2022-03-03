@@ -6,13 +6,13 @@ client = TestClient(app)
 def test_root():
     response = client.get('/')
     assert response.status_code == 200
-    assert response.json() == {"message": "API is working OK"}
+    assert response.json() == {"message": "API is online"}
 
 
 def test_status():
     response = client.get('/status')
     assert response.status_code == 200
-    assert 'BASE_DIR' in response.json().keys()
+    assert 'base_dir' in response.json().keys()
     assert 'environment' in response.json().keys()
 
 

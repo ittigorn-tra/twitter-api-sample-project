@@ -1,24 +1,7 @@
-import os
-import sys
-import inspect
-import requests
-import pytz
 from datetime import datetime
 
-if __name__ == "__main__":
-    inc_path = os.path.realpath(os.path.abspath(os.path.dirname(
-        os.path.split(inspect.getfile(inspect.currentframe()))[0])))
-    for i in range(10):
-        if os.path.split(inc_path)[1].lower() == 'app':
-            inc_path = os.path.dirname(inc_path)
-            break
-        else:
-            inc_path = os.path.dirname(inc_path)
-    else:
-        raise Exception('Cannot find the project root path')
-    if inc_path not in sys.path:
-        sys.path.append(inc_path)
-
+import pytz
+import requests
 from app.core.settings import Settings
 
 
