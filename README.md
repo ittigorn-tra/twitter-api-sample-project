@@ -20,7 +20,7 @@ Conversion notes:
 
 
 
-# Twitter API Sample Project
+# Twitter API Sample Project (FastAPI)
 
 
 ## About this project
@@ -28,11 +28,6 @@ Conversion notes:
 This is a simple project built for a code challenge. This API fetches tweets without using any third-party Twitter scraper and reshapes the data into the predefined schema. The code challenge detail / requirements for this project can be found in `requirements/Project_Requirements.md`
 
 
-## Live API sample on Google Cloud Run
-
-Live API sample can be reached via the link below:
-
-[https://twitter-api-sample-xneb555pta-df.a.run.app](https://twitter-api-sample-xneb555pta-df.a.run.app)
 
 Note: There is a postman collection you can import for testing in `./postman`
 
